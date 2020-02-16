@@ -1,5 +1,5 @@
 import { IState, IRootState, IStoreMock } from './store.types'
-import { mockArticle } from '@/entities'
+import { mockArticles } from '@/entities'
 import { mockActions } from './actions/actions.mock'
 import { mockMutations } from './mutations/mutations.mock'
 import { mockProvider } from '@/services'
@@ -11,7 +11,7 @@ export const mockRootState = (): IRootState => ({
 })
 
 export const mockState = (): IState => ({
-  articles: mockArticle(),
+  articles: mockArticles(),
   version: 0
 })
 

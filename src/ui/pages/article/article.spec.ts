@@ -4,7 +4,7 @@ import { ArticlePage } from './article'
 import { mount, createLocalVue, Wrapper } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 import { mockStorage } from '@/store'
-import { mockArticle } from '@/entities'
+import { mockArticles } from '@/entities'
 
 Vue.use(Vuetify)
 Vue.use(VueRouter)
@@ -12,7 +12,7 @@ Vue.use(VueRouter)
 const localVue = createLocalVue()
 const storage = mockStorage()
 
-storage.getters.getOneArticlesById.mockReturnValueOnce(mockArticle()[0])
+storage.getters.getOneArticlesById.mockReturnValueOnce(mockArticles()[0])
 
 describe('>>> ArticlePage', () => {
   let wrapper: Wrapper<ArticlePage>

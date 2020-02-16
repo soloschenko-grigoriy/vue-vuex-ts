@@ -1,19 +1,19 @@
-import { mockArticle, mockArticleData } from '@/entities/article/article.mock'
-import { mockComment } from '@/entities'
+import { mockArticles, mockArticlesData } from '@/entities/article/article.mock'
+import { mockComments } from '@/entities'
 import { ArticlesService } from './articles'
 
 describe('>>> Articles Service', () => {
-  const service = new ArticlesService(mockArticleData())
+  const service = new ArticlesService(mockArticlesData())
 
   describe('>> getMany', () => {
     it('should return all data', () => {
-      expect(service.getAll()).toEqual(mockArticle())
+      expect(service.getAll()).toEqual(mockArticles())
     })
   })
 
   describe('>> getOneById', () => {
     it('should return one article by provided id', () => {
-      const article = mockArticle()[1]
+      const article = mockArticles()[1]
       const id = article.id as number
       expect(service.getOneById(id)).toEqual(article)
     })
@@ -24,9 +24,9 @@ describe('>>> Articles Service', () => {
   })
 
   describe('>> createComment', () => {
-    const data = mockComment()[0]
+    const data = mockComments()[0]
     it('should add new comment to provided article and return it', () => {
-      const article = mockArticle()[0]
+      const article = mockArticles()[0]
       const id = article.id as number
       const commentsAmount = article.comments.length
 
@@ -41,7 +41,7 @@ describe('>>> Articles Service', () => {
 
     it('should throw an error if comment is not valid', () => {
       const data = {
-        ...mockComment()[0],
+        ...mockComments()[0],
         title: ''
       }
       expect(() => { service.createComment(1, data) }).toThrow()

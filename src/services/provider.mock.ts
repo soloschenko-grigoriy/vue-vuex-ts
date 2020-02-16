@@ -1,6 +1,6 @@
 import { IProviderMock } from './provider.types'
-import { mockArticlesService } from './articles'
+import { mockArticlessService } from './articles'
 
 export const mockProvider = (): IProviderMock => ({
-  articles: mockArticlesService()
+  articles: mockArticlessService()
 })

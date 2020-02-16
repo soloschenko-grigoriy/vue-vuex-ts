@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import { FullComponent } from './full'
 import { mount, createLocalVue, Wrapper } from '@vue/test-utils'
-import { mockArticle, mockComment } from '@/entities'
+import { mockArticles, mockComments } from '@/entities'
 import VueRouter from 'vue-router'
 import { mockStorage } from '@/store'
 
@@ -10,9 +10,9 @@ Vue.use(Vuetify)
 Vue.use(VueRouter)
 
 const localVue = createLocalVue()
-const article = mockArticle()[0]
-const comment1 = mockComment()[0]
-const comment2 = mockComment()[1]
+const article = mockArticles()[0]
+const comment1 = mockComments()[0]
+const comment2 = mockComments()[1]
 
 article.comments.push(comment1)
 article.comments.push(comment2)

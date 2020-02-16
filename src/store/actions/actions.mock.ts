@@ -3,7 +3,7 @@ import { ActionContext } from 'vuex'
 import { IState, IRootState } from '../store.types'
 import { mockRootState, mockState } from '../store.mock'
 import { mockGetters } from '../getters'
-import { mockComment } from '@/entities'
+import { mockComments } from '@/entities'
 
 export const mockActionsContext = (): ActionContext<IState, IRootState> => ({
   commit: jest.fn(),
@@ -14,7 +14,7 @@ export const mockActionsContext = (): ActionContext<IState, IRootState> => ({
   rootGetters: {}
 })
 
-export const mockCreateCommentActionPayload = (articleId = 0, comment = mockComment()[0]): ICreateCommentActionPayload => ({
+export const mockCreateCommentActionPayload = (articleId = 0, comment = mockComments()[0]): ICreateCommentActionPayload => ({
   articleId,
   comment
 })

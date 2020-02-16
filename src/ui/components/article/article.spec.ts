@@ -2,14 +2,14 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import { ArticleComponent } from './article'
 import { mount, createLocalVue, Wrapper } from '@vue/test-utils'
-import { mockArticle } from '@/entities'
+import { mockArticles } from '@/entities'
 import VueRouter from 'vue-router'
 
 Vue.use(Vuetify)
 Vue.use(VueRouter)
 
 const localVue = createLocalVue()
-const article = mockArticle()[0]
+const article = mockArticles()[0]
 
 describe('>>> Article Component', () => {
   let wrapper: Wrapper<ArticleComponent>

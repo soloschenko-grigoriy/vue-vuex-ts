@@ -1,17 +1,17 @@
 import { Article } from './article'
-import { mockArticle, mockArticleData } from './article.mock'
+import { mockArticles, mockArticlesData } from './article.mock'
 describe('>>> Article', () => {
   describe('>> constructor', () => {
     it('should instantiate id only if it was provided', () => {
       const entity1 = new Article({
-        ...mockArticleData()[0],
+        ...mockArticlesData()[0],
         id: 1
       })
 
       expect(entity1.id).toBe(1)
 
       const entity2 = new Article({
-        ...mockArticleData()[0],
+        ...mockArticlesData()[0],
         id: undefined
       })
 
@@ -22,7 +22,7 @@ describe('>>> Article', () => {
   describe('>> validate', () => {
     it('should fail validation if title is empty', () => {
       const entity = new Article({
-        ...mockArticleData()[0],
+        ...mockArticlesData()[0],
         title: ''
       })
 
@@ -31,7 +31,7 @@ describe('>>> Article', () => {
 
     it('should fail validation if title is too long', () => {
       const entity = new Article({
-        ...mockArticleData()[0],
+        ...mockArticlesData()[0],
         title: 'titletitletitletitletitle'
       })
 
@@ -40,7 +40,7 @@ describe('>>> Article', () => {
 
     it('should fail validation if content is empty', () => {
       const entity = new Article({
-        ...mockArticleData()[0],
+        ...mockArticlesData()[0],
         content: ''
       })
 
@@ -49,7 +49,7 @@ describe('>>> Article', () => {
 
     it('should fail validation if content is too long', () => {
       const entity = new Article({
-        ...mockArticleData()[0],
+        ...mockArticlesData()[0],
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ante eget eros molestie rutrum ut ut odio. Nullam quis facilisis augue. Suspendisse potenti. Maecenas lobortis, nisl eget tempor convallis, leo est egestas nisi, a feugiat justo ipsum eget dolor. Duis in condimentum nisl, dapibus posuere leo. Nulla interdum ligula et hendrerit semper. Integer id nulla laoreet, auctor dolor non, tempus arcu. Ut scelerisque dolor vel consequat bibendum. Fusce fermentum, sapien non tincidunt egestas, quam ex ultrices risus, non dictum purus enim imperdiet dui. Quisque eget pulvinar enim, varius bibendum turpis. Aliquam vulputate posuere leo non euismod. Curabitur pretium cursus elit sed blandit. '
       })
 
@@ -57,7 +57,7 @@ describe('>>> Article', () => {
     })
 
     it('should return true if entity is valid', () => {
-      expect(mockArticle()[0].validate()).toBeTruthy()
+      expect(mockArticles()[0].validate()).toBeTruthy()
     })
   })
 })

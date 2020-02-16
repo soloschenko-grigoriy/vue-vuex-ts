@@ -1,7 +1,7 @@
 import { IArticleData, IArticle } from './article.types'
 import { Article } from './article'
 
-export const mockArticleData = (): IArticleData[] => [{
+export const mockArticlesData = (): IArticleData[] => [{
   id: 1,
   title: 'title',
   content: 'content',
@@ -23,4 +23,4 @@ export const mockArticleData = (): IArticleData[] => [{
   comments: []
 }]
 
-export const mockArticle = (data: IArticleData[] = mockArticleData()): IArticle[] => data.map(item => new Article(item))
+export const mockArticles = (data: IArticleData[] = mockArticlesData()): IArticle[] => data.map(item => new Article(item))

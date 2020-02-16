@@ -1,7 +1,7 @@
 import { IComment, ICommentData } from './comment.types'
 import { Comment } from './comment'
 
-export const mockCommentData = (): ICommentData[] => [{
+export const mockCommentsData = (): ICommentData[] => [{
   id: 1,
   title: 'title',
   content: 'content',
@@ -15,4 +15,4 @@ export const mockCommentData = (): ICommentData[] => [{
   createdAt: '2019-12-07T11:54:04 +05:00'
 }]
 
-export const mockComment = (data: ICommentData[] = mockCommentData()): IComment[] => data.map(item => new Comment(item))
+export const mockComments = (data: ICommentData[] = mockCommentsData()): IComment[] => data.map(item => new Comment(item))
