@@ -1,10 +1,14 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import vuetify from './plugins/vuetify'
+import { makeStore } from './store'
+import { App, router, vuetify } from './ui'
+import { prepareStorage, prepareServices } from './ui/plugins'
 
 Vue.config.productionTip = false
+
+const store = makeStore()
+
+prepareStorage(store)
+prepareServices(store)
 
 new Vue({
   router,
