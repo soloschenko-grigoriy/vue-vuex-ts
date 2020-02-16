@@ -1,37 +1,42 @@
-# vue-vuex-ts
+# Vue/Vuex with Business logic Separation Example
+
+> Example of the projects that follow the paradigm of Clean Architecture
 
 ## Project setup
+- install Node.js (the version is specified in package.json)
+- if you use nvm: 
+```
+nvm use
+```
+- Install dependencies
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+## Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Run your unit tests
+## Run your unit tests
 ```
-npm run test:unit
+npm run test
 ```
-
-### Lints and fixes files
+## Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Deployments 
+- [Production](https://vue-vuex-ts-services.herokuapp.com)
 
-### Images Credis:
-- TheRegisti https://unsplash.com/photos/VEbUF1BnGkA
-- Daniel Olah https://unsplash.com/photos/6KQETG8J-zI 
-- Spencer Davis https://unsplash.com/photos/ipG88UDIQdg
-- Victor Ene https://unsplash.com/photos/siOiG_2KBpA
-- Alec Krum https://unsplash.com/photos/PkXNYci4p4Y
-- Cole Wyland https://unsplash.com/photos/7Dn0hmvnCh8
+## Tech stack
+- Vue/Vuex
+- Vuetify
+- TypeScript / ESLint
+- Jest
