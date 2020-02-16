@@ -11,6 +11,7 @@
     "test:watch": "vue-cli-service test:unit --watch --coverage"
   },
   "dependencies": {
+    "connect-history-api-fallback": "1.6.0",
     "core-js": "^3.6.4",
     "express": "4.17.1",
     "pre-commit": "1.2.2",
