@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-import { HomeView } from './home'
+import { HomePage } from './home'
 import { mount, createLocalVue, Wrapper } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 
@@ -10,10 +10,10 @@ Vue.use(VueRouter)
 const localVue = createLocalVue()
 
 describe('>>> HomePage', () => {
-  let wrapper: Wrapper<HomeView>
+  let wrapper: Wrapper<HomePage>
 
   beforeEach(() => {
-    wrapper = mount(HomeView, {
+    wrapper = mount(HomePage, {
       localVue,
       vuetify: new Vuetify(),
       router: new VueRouter()

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { HomeView } from '@/ui/pages'
+import { HomePage } from '@/ui/pages'
 
 Vue.use(VueRouter)
 
@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomeView
+    component: HomePage
   }
 ]
 

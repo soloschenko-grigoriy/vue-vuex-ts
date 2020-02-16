@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component({
-  render (this: HomeView) {
+  render (this: HomePage) {
     return (
       <v-container>
         <v-row>
@@ -12,4 +12,4 @@ import Component from 'vue-class-component'
     )
   }
 })
-export class HomeView extends Vue {}
+export class HomePage extends Vue {}
