@@ -8,7 +8,7 @@ import { FullComponent } from '@/ui/components'
     this.$storage.actions.fetchArticles()
   },
 
-  render (this: ArticleView): Vue.VNode {
+  render (this: ArticlePage): Vue.VNode {
     return (
       <v-container>
         <v-row>
@@ -20,7 +20,7 @@ import { FullComponent } from '@/ui/components'
     )
   }
 })
-export class ArticleView extends Vue {
+export class ArticlePage extends Vue {
   private get article (): IArticle | undefined {
     return this.$storage.getters.getOneArticlesById(Number(this.$route.params.id))
   }

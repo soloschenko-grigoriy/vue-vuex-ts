@@ -8,7 +8,7 @@ import { ArticleComponent } from '@/ui/components'
     this.$storage.actions.fetchArticles()
   },
 
-  render (this: HomeView) {
+  render (this: HomePage) {
     return (
       <v-container>
         <v-row>
@@ -18,7 +18,7 @@ import { ArticleComponent } from '@/ui/components'
     )
   }
 })
-export class HomeView extends Vue {
+export class HomePage extends Vue {
   private get articles (): IArticle[] {
     return this.$storage.getters.getAllArticles()
   }
