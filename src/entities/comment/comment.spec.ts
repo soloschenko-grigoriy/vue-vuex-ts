@@ -31,7 +31,7 @@ describe('>>> Comment', () => {
     it('should fail validation if title is too long', () => {
       const entity = new Comment({
         ...mockCommentsData()[0],
-        title: 'titletitletitletitletitle'
+        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       })
 
       expect(entity.validate()).toBeFalsy()
@@ -49,7 +49,7 @@ describe('>>> Comment', () => {
     it('should fail validation if author name is too long', () => {
       const entity = new Comment({
         ...mockCommentsData()[0],
-        author: 'titletitletitletitletitle'
+        author: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       })
 
       expect(entity.validate()).toBeFalsy()
