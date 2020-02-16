@@ -20,6 +20,7 @@ module.exports = {
     '**/services/**/*.ts',
     '**/store/**/*.ts',
     '**/ui/components/*/**.tsx',
+    '**/ui/pages/*/**.tsx',
     '!**/store.ts',
     '!**/*.mock.ts',
     '!**/*.types.ts',
