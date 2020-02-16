@@ -8,7 +8,7 @@ import { FullComponent } from '@/ui/components'
     this.$storage.actions.fetchArticles()
   },
 
-  render(this: ArticleView): Vue.VNode {
+  render (this: ArticleView): Vue.VNode {
     return (
       <v-container>
         <v-row>

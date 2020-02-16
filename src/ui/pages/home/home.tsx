@@ -8,11 +8,11 @@ import { ArticleComponent } from '@/ui/components'
     this.$storage.actions.fetchArticles()
   },
 
-  render(this: HomeView) {
+  render (this: HomeView) {
     return (
       <v-container>
         <v-row>
-          {this.articles.map(article => ( <ArticleComponent article={article} /> ))}
+          {this.articles.map(article => (<ArticleComponent article={article} />))}
         </v-row>
       </v-container>
     )

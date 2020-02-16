@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -11,6 +12,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "express": "4.17.1",
+    "pre-commit": "1.2.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.2",
     "vue-property-decorator": "^8.3.0",
@@ -48,5 +51,9 @@
   "engines": {
     "node": "12.10.0",
     "npm": "6.10.3"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
 }

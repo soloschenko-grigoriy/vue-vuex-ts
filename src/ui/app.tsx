@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component({
-  render(): Vue.VNode {
+  render (): Vue.VNode {
     return (
       <v-app>
         <v-app-bar app color="primary" dark />
