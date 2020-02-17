@@ -11,7 +11,7 @@ export class Comment implements IComment {
   readonly title: string
   readonly content: string
   readonly author: string
-  readonly createdAt?: Date | string | null
+  readonly createdAt?: Date | string
 
   constructor (data: ICommentData) {
     if (data.id) {
@@ -21,7 +21,10 @@ export class Comment implements IComment {
     this.title = data.title
     this.content = data.content
     this.author = data.author
-    this.createdAt = data.createdAt
+
+    if (data.createdAt) {
+      this.createdAt = data.createdAt
+    }
   }
 
   validate (): boolean {

@@ -1,4 +1,4 @@
-import { IArticle } from '@/entities'
+import { IArticleData } from '@/entities'
 import { Store } from 'vuex'
 import { IActionsMock } from './actions'
 import { IMutationsMock } from './mutations'
@@ -11,7 +11,7 @@ export interface IRootState {
 }
 
 export interface IState extends IRootState {
-  articles: IArticle[]
+  articles: IArticleData[]
 }
 
 export type IStore = Store<IState>

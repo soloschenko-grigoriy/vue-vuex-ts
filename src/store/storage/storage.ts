@@ -2,6 +2,7 @@ import { IStorage } from './storage.types'
 import { ICreateCommentActionPayload } from '../actions'
 import { IStore } from '../store.types'
 import { IArticle } from '@/entities'
+import { IMutationsCreateCommentMutationPayload } from '../mutations'
 
 export const makeStorage = (store: IStore): IStorage => ({
   getters: {
@@ -27,7 +28,7 @@ export const makeStorage = (store: IStore): IStorage => ({
     fetchArticles (payload: IArticle[]): void {
       store.commit('fetchArticles', payload)
     },
-    createComment (payload: IArticle): void {
+    createComment (payload: IMutationsCreateCommentMutationPayload): void {
       store.commit('createComment', payload)
     }
   }

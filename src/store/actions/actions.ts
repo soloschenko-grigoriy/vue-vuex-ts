@@ -8,6 +8,6 @@ export const actions: IActions = {
   createComment (context: Context, payload: ICreateCommentActionPayload): void {
     const article = this.$services.articles.createComment(payload.articleId, payload.comment)
 
-    this.$storage.mutations.createComment(article)
+    this.$storage.mutations.createComment({ article, comment: payload.comment })
   }
 }

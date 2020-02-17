@@ -18,6 +18,22 @@ describe('>>> Comment', () => {
     expect(entity2.id).toBeUndefined()
   })
 
+  it('should instantiate createdAt only if it was provided', () => {
+    const entity1 = new Comment({
+      ...mockCommentsData()[0],
+      createdAt: '2019-12-19T11:54:04 +05:00'
+    })
+
+    expect(entity1.createdAt).toBe('2019-12-19T11:54:04 +05:00')
+
+    const entity2 = new Comment({
+      ...mockCommentsData()[0],
+      createdAt: undefined
+    })
+
+    expect(entity2.createdAt).toBeUndefined()
+  })
+
   describe('>> validate', () => {
     it('should fail validation if title is empty', () => {
       const entity = new Comment({

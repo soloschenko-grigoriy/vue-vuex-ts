@@ -3,7 +3,7 @@ export interface ICommentData {
   readonly title: string
   readonly content: string
   readonly author: string
-  readonly createdAt?: Date | string | null
+  readonly createdAt?: Date | string
 }
 
 export interface IComment extends ICommentData {

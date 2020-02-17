@@ -4,14 +4,14 @@ import {
   ARTICLE_MAX_TITLE_LENGTH,
   ARTICLE_MAX_CONTENT_LENGTH
 } from './article.types'
-import { IComment } from '../comment'
+import { IComment, Comment } from '../comment'
 
 export class Article implements IArticle {
   readonly id?: number
   readonly title: string
   readonly content: string
   readonly short: string
-  readonly createdAt: Date | string
+  readonly createdAt?: Date | string
   readonly isActive: boolean
   readonly picture: string
   readonly tags: string[]
@@ -29,7 +29,12 @@ export class Article implements IArticle {
     this.isActive = data.isActive
     this.picture = data.picture
     this.tags = data.tags
-    this.comments = data.comments
+
+    if (data.createdAt) {
+      this.createdAt = data.createdAt
+    }
+
+    this.comments = data.comments.map(comment => new Comment(comment))
   }
 
   validate (): boolean {

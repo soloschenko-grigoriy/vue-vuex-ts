@@ -1,7 +1,8 @@
 import { makeStorage } from './storage'
 import { mockStore } from '../store.mock'
-import { mockCreateCommentActionPayload } from '../actions/actions.mock'
 import { mockArticles } from '@/entities'
+import { mockCreateCommentActionPayload } from '../actions/actions.mock'
+import { mockCreateCommentMutationPayload } from '../mutations/mutations.mock'
 
 describe('>>> Storage', () => {
   const store = mockStore()
@@ -41,7 +42,7 @@ describe('>>> Storage', () => {
     })
 
     it('should proxy createComment', () => {
-      const payload = mockArticles()[0]
+      const payload = mockCreateCommentMutationPayload()
       storage.mutations.createComment(payload)
       expect(store.commit).toBeCalledWith('createComment', payload)
     })

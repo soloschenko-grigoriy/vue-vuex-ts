@@ -29,7 +29,7 @@ describe('>>> Actions', () => {
       actions.createComment.bind(store)(context, payload)
 
       expect(store.$services.articles.createComment).toBeCalledWith(payload.articleId, payload.comment)
-      expect(store.$storage.mutations.createComment).toBeCalledWith(article)
+      expect(store.$storage.mutations.createComment).toBeCalledWith({ article, comment })
     })
   })
 })
