@@ -1,6 +1,6 @@
-# Vue/Vuex with Business logic Separation Example
+# Building Vue Enterprise Application
 
-> Example of the projects that follow the paradigm of Clean Architecture
+> Applying Principles of Clean Architecture to Enterprise Frontend Application
 
 ## Project setup
 - install Node.js (the version is specified in package.json)
