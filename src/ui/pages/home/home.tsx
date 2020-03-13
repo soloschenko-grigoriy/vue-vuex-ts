@@ -4,7 +4,7 @@ import { IArticle } from '@/entities'
 import { ArticleComponent } from '@/ui/components'
 
 @Component({
-  mounted(): void {
+  mounted (): void {
     this.$storage.actions.fetchArticles()
   },
 

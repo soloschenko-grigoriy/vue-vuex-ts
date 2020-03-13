@@ -6,7 +6,7 @@ import { IArticleProps } from './article.types'
   props: {
     article: { type: Object, required: true }
   },
-  render(this: ArticleComponent): Vue.VNode {
+  render (this: ArticleComponent): Vue.VNode {
     const article = this.$props.article
     return (
       <v-col cols="6">

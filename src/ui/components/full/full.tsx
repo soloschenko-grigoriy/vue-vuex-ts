@@ -16,7 +16,7 @@ import {
 
     return (
       <v-col cols="12">
-         <v-card class="mb-2">
+        <v-card class="mb-2">
           <v-img class="white--text align-end" height="500px" src={article.picture}>
             <v-card-title>{article.title}</v-card-title>
           </v-img>
@@ -118,11 +118,11 @@ export class FullComponent extends VueComponent<IFullProps> {
     (v: string): boolean | string => v.length <= COMMENTS_MAX_CONTENT_LENGTH || 'Content must be less than 10 characters'
   ]
 
-  private getDate(timestamp: string): string {
+  private getDate (timestamp: string): string {
     return timestamp.substring(0, timestamp.indexOf('T'))
   }
 
-  private onSubmit(e: Event): void {
+  private onSubmit (e: Event): void {
     e.preventDefault()
     this.$storage.actions.createComment({
       articleId: this.$props.article.id as number,
