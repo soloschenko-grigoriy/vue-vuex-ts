@@ -40,3 +40,6 @@ npm run lint
 - Vuetify
 - TypeScript / ESLint
 - Jest
+
+## Links
+[Complete tutorial](https://medium.com/@gregsolo/building-vue-enterprise-application-part-0-overture-6d41bea14236)
