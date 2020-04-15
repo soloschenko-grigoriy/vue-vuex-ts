@@ -1,9 +1,9 @@
 import { IMutations, IMutationsCreateCommentMutationPayload } from './mutations.types'
-import { IArticle } from '@/entities'
+import { IArticleData } from '@/entities'
 import { IState } from '../store.types'
 
 export const mutations: IMutations = {
-  fetchArticles (state: IState, payload: IArticle[]): void {
+  fetchArticles (state: IState, payload: IArticleData[]): void {
     payload.map(article => state.articles.push(article))
   },
 

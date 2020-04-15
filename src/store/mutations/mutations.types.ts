@@ -1,9 +1,9 @@
-import { IArticle, ICommentData } from '@/entities'
+import { IArticle, ICommentData, IArticleData } from '@/entities'
 import { IState } from '../store.types'
 import { MutationTree, Store } from 'vuex'
 
 export interface IMutations extends MutationTree<IState> {
-  fetchArticles (this: Store<IState>, state: IState, payload: IArticle[]): void
+  fetchArticles (this: Store<IState>, state: IState, payload: IArticleData[]): void
   createComment (this: Store<IState>, state: IState, payload: IMutationsCreateCommentMutationPayload): void
 }
 
