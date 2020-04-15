@@ -1,5 +1,5 @@
 import { ICreateCommentActionPayload } from '../actions'
-import { IArticle } from '@/entities'
+import { IArticle, IArticleData } from '@/entities'
 import { IMutationsCreateCommentMutationPayload } from '../mutations'
 
 export interface IStorage {
@@ -14,7 +14,7 @@ export interface IStorage {
   }
 
   mutations: {
-    fetchArticles (payload: IArticle[]): void
+    fetchArticles (payload: IArticleData[]): void
     createComment (payload: IMutationsCreateCommentMutationPayload): void
   }
 }

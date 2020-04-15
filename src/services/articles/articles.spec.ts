@@ -6,7 +6,7 @@ describe('>>> Articles Service', () => {
 
   describe('>> getMany', () => {
     it('should return all data', () => {
-      expect(service.getAll()).toEqual(mockArticles())
+      expect(service.getAll()).toEqual(mockArticlesData())
     })
   })
 

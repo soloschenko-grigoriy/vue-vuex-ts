@@ -1,5 +1,5 @@
 import { mockActionsContext, mockCreateCommentActionPayload } from './actions.mock'
-import { mockArticles, mockComments } from '@/entities'
+import { mockComments, mockArticlesData, Article } from '@/entities'
 import { actions } from './actions'
 import { mockStore } from '../store.mock'
 
@@ -7,7 +7,7 @@ describe('>>> Actions', () => {
   describe('>> fetchArticles', () => {
     const store = mockStore()
     const context = mockActionsContext()
-    const articles = mockArticles()
+    const articles = mockArticlesData()
 
     it('should fetch all data and then commit articles mutation', () => {
       store.$services.articles.getAll.mockReturnValueOnce(articles)
@@ -20,7 +20,7 @@ describe('>>> Actions', () => {
 
     it('should call service to create new comment and then creation mutation', () => {
       const payload = mockCreateCommentActionPayload()
-      const article = articles[0]
+      const article = new Article(articles[0])
       const comment = mockComments()[0]
       article.comments.push(comment)
 

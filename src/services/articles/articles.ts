@@ -10,8 +10,8 @@ import { IArticlesService } from './articles.types'
 export class ArticlesService implements IArticlesService {
   constructor (private readonly data: IArticleData[]) { }
 
-  getAll (): IArticle[] {
-    return this.data.map(data => new Article(data))
+  getAll (): IArticleData[] {
+    return this.data
   }
 
   getOneById (id: number): IArticle | undefined {

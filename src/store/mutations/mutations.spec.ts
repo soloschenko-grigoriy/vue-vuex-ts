@@ -1,13 +1,13 @@
 import { mutations } from './mutations'
 import { mockState, mockStore } from '../store.mock'
-import { mockArticles } from '@/entities'
+import { mockArticles, mockArticlesData } from '@/entities'
 import { mockCreateCommentMutationPayload } from './mutations.mock'
 
 describe('>>> Mutations', () => {
   describe('>> fetchArticles', () => {
     it('should add all provided articles tot the store', () => {
       const state = mockState()
-      const payload = mockArticles()
+      const payload = mockArticlesData()
       const expected = {
         ...state,
         articles: [
