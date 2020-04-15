@@ -1,6 +1,6 @@
-# Vue/Vuex with Business logic Separation Example
+# Building Vue Enterprise Application
 
-> Example of the projects that follow the paradigm of Clean Architecture
+> Applying Principles of Clean Architecture to Enterprise Frontend Application
 
 ## Project setup
 - install Node.js (the version is specified in package.json)
@@ -40,3 +40,6 @@ npm run lint
 - Vuetify
 - TypeScript / ESLint
 - Jest
+
+## Links
+[Complete tutorial](https://medium.com/@gregsolo/building-vue-enterprise-application-part-0-overture-6d41bea14236)
