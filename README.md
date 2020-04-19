@@ -43,3 +43,11 @@ npm run lint
 
 ## Links
 [Complete tutorial](https://medium.com/@gregsolo/building-vue-enterprise-application-part-0-overture-6d41bea14236)
+
+### Images Credis:
+- TheRegisti https://unsplash.com/photos/VEbUF1BnGkA
+- Daniel Olah https://unsplash.com/photos/6KQETG8J-zI 
+- Spencer Davis https://unsplash.com/photos/ipG88UDIQdg
+- Victor Ene https://unsplash.com/photos/siOiG_2KBpA
+- Alec Krum https://unsplash.com/photos/PkXNYci4p4Y
+- Cole Wyland https://unsplash.com/photos/7Dn0hmvnCh8
